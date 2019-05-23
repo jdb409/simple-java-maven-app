@@ -12,7 +12,7 @@ pipeline {
             }
         }
 
-        stage('Test')
+        stage('Test'){
         steps{
             sh 'mvn test'
         }
@@ -21,6 +21,7 @@ pipeline {
                 juint 'target/surefire-reports/*.xml'
             }
         }
+    }
     }
 
 }
